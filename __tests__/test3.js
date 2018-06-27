@@ -10,21 +10,12 @@ it('should be a teapot',function () {
             'result': Joi.array().required()
 
         })
-        .expect('json', 'RestResponse.result.?', {       
-            name: 'Turkey',
-            alpha2_code : 'TR',
-            alpha3_code : 'TUR',
-            
-
-        })
-
-
-        
+        .expect('json','RestResponse.result.?', { name: 'India' })
         .then(function (res) {
-           var data=JSON.parse(res['_body']);
-           expect(data.RestResponse.messages[0]).toBe('Total [249] records found.');
-          //  console.log(data.RestResponse.messages[0]);
-         //  console.log(data.RestResponse.result[1]['name']);
-        });
+            var data=('json','RestResponse.result.?', { name: 'India' })
+            
+            console.log('volkan');
+            console.log(data);
+      })
 
 });
