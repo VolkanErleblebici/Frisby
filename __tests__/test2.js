@@ -7,10 +7,12 @@ it('should be a teapot',function () {
         .expect('header', 'Content-Type', 'application/json;charset=UTF-8')
         .expect('bodyContains', 'result')
         .expect('jsonTypes', 'RestResponse', { 
-            'result': Joi.array().required()
+            'result': Joi.array().required()//Array kontrol...
         })
         .expect('jsonTypes', 'RestResponse.result.?', { 
-           // 'result': Joi.array().required(),
+            /*
+            anahtar tür kontrolleri...
+            */
             'id': Joi.number().required(),
             'name': Joi.string().required(),
             'abbr': Joi.string().required(),
@@ -19,14 +21,4 @@ it('should be a teapot',function () {
             'largest_city': Joi.string().required(),
             'capital': Joi.string().required()
         })
-        
-
-
-        /*
-        .then(function (res) {
-           var data=JSON.parse(res['_body']);
-            console.log(data.RestResponse.result[1]['name']);
-         //  console.log(data.RestResponse.result[1]['name']);
-        });
-*/
 });

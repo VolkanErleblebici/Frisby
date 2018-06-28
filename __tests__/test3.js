@@ -13,7 +13,10 @@ it('should be a teapot',function () {
         .expect('json','RestResponse.result.?', { name: 'India' })
         .then(function (res) {
             var data=('json','RestResponse.result.?', { name: 'India' })
-            
+            /*
+            buradan sonrası calismamaktadir..
+            Test icin istenen sonuca ulasilamadi...            
+            */
             console.log('volkan');
             console.log(data);
       })
